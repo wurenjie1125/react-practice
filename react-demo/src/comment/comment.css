@@ -1,0 +1,197 @@
+.user-face {
+  float: left;
+  margin: 7px 0 0 5px;
+  position: relative; }
+
+.comment-send .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; }
+
+.textarea-container {
+  position: relative;
+  margin-left: 85px;
+  margin-right: 80px; }
+
+textarea {
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #f4f5f7;
+  border: 1px solid #e5e9ef;
+  overflow: auto;
+  border-radius: 4px;
+  color: #555;
+  width: 100% !important;
+  height: 65px;
+  transition: 0s;
+  padding: 5px 10px;
+  line-height: normal;
+  resize: none; }
+  textarea:focus {
+    outline: 0; }
+
+.comment-submit {
+  width: 70px;
+  height: 64px;
+  position: absolute;
+  right: -80px;
+  top: 0;
+  padding: 4px 15px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 60px;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: #00a1d6;
+  border: 1px solid #00a1d6;
+  transition: .1s;
+  user-select: none;
+  outline: none; }
+
+.emoji-container {
+  margin-left: 86px;
+  margin-top: 3px;
+  width: 66px;
+  height: 24px;
+  position: relative; }
+
+.comment-emoji {
+  padding: 0;
+  line-height: 24px;
+  color: #99a2aa;
+  border: 1px solid #e5e9ef;
+  border-radius: 4px;
+  position: relative;
+  z-index: 101;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer; }
+  .comment-emoji:focus {
+    outline: 0; }
+
+.emoji-container:focus {
+  outline: 0; }
+
+.comment-emoji .text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 12px !important; }
+
+.emoji-box {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  font-size: 12px;
+  font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;
+  color: #222;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #ccd0d7;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+  margin-top: 7px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 386px;
+  z-index: 103;
+  padding: 0 20px; }
+
+.emoji-wrap {
+  width: 370px;
+  height: 152px;
+  overflow: auto; }
+
+.emoji-wrap span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+  border-radius: 4px;
+  padding: 0 5px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+.emoji-wrap span:hover {
+  background-color: #ddd; }
+
+.visible {
+  display: block; }
+
+.emoji-title {
+  line-height: 30px; }
+
+.comment-list {
+  margin-top: 30px;
+  border-top: 1px solid #eee; }
+  .comment-list li {
+    display: flex; }
+  .comment-list .avatar-box {
+    margin-right: 30px;
+    margin-top: 30px; }
+    .comment-list .avatar-box .avatar {
+      border-radius: 50%; }
+  .comment-list .details {
+    padding-top: 30px;
+    width: 100%; }
+    .comment-list .details:hover > .info .report, .comment-list .details:hover > .info .blacklist {
+      display: inline-block; }
+    .comment-list .details .name {
+      color: #6d757a;
+      line-height: 25px;
+      height: 25px; }
+    .comment-list .details .content {
+      line-height: 20px;
+      padding: 2px 0;
+      font-size: 14px;
+      text-shadow: none;
+      overflow: hidden;
+      word-wrap: break-word;
+      word-break: break-word; }
+    .comment-list .details .info {
+      color: #99a2aa;
+      line-height: 26px;
+      font-size: 12px; }
+      .comment-list .details .info span {
+        display: inline-block;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 20px; }
+      .comment-list .details .info .report, .comment-list .details .info .reply, .comment-list .details .info .blacklist {
+        padding: 0 5px; }
+        .comment-list .details .info .report:hover, .comment-list .details .info .reply:hover, .comment-list .details .info .blacklist:hover {
+          background-color: #e5e9ef;
+          color: #00a1d6; }
+      .comment-list .details .info .report, .comment-list .details .info .blacklist {
+        display: none; }
+    .comment-list .details .comment-send {
+      margin-top: 10px; }
+
+.reply-list .avatar-box {
+  margin-top: 20px;
+  margin-right: 20px; }
+  .reply-list .avatar-box .avatar {
+    width: 24px;
+    height: 24px; }
+
+.reply-list .name {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  padding-bottom: 4px;
+  display: inline-block;
+  word-wrap: break-word; }
+
+.reply-list .content {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-left: 20px; }
+
+.reply-list .details {
+  padding-top: 10px; }
