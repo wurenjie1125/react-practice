@@ -1,0 +1,21 @@
+.page-container {
+  margin: 20px auto;
+  font-size: 12px; }
+  .page-container a {
+    text-decoration: none; }
+  .page-container .totle-page {
+    padding-right: 10px; }
+  .page-container .prev, .page-container .next, .page-container .page-num {
+    display: inline-block;
+    color: #222;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 4px;
+    text-decoration: none;
+    line-height: 26px; }
+    .page-container .prev:hover, .page-container .next:hover, .page-container .page-num:hover {
+      color: #00a1d6; }
+    .page-container .prev.current, .page-container .next.current, .page-container .page-num.current {
+      color: #00a1d6; }
+  .page-container .page-box {
+    display: inline-block; }

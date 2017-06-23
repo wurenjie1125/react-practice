@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './comment.css'
+import Page from '../page/page';
 import axios from 'axios'
 
 const comment = require('../data/comment.json');
@@ -17,6 +18,8 @@ class Comment extends Component {
             <section>
                 <CommentSend/>
                 <CommentList/>
+                <CommentSend/>
+
             </section>
         )
     }
@@ -99,6 +102,7 @@ class CommentItem extends Component {
                     </div>
                     <ul className="reply-list">
                         { ReplyList }
+                        <Page totalPage="10" />
                         { replyInput }
                     </ul>
 
@@ -149,14 +153,17 @@ class CommentSend extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.focus = this.focus.bind(this);
         this.state = {
-            commentValue:'',
+            commentValue:"",
         }
     }
     componentDidMount(){
         this.focus();
-        this.setState({commentValue:this.props.commentValue})
+        if(this.props.commentValue){
+            this.setState({commentValue:this.props.commentValue})
+        }
     }
     componentWillReceiveProps(nextProps){
+        // emojibox也会传递参数，注意！！！
         this.focus();
         this.setState({commentValue:nextProps.commentValue})
     }
@@ -168,6 +175,7 @@ class CommentSend extends Component {
         this.setState({commentValue: event.target.value});
     }
     appendEmoji(item){
+        console.log(this,item)
         this.setState({commentValue:this.state.commentValue+item});
     }
     render(){
