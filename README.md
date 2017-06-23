@@ -7,3 +7,6 @@ cd react-demo
 npm install
 npm start
 ```
+## list
+- bilibili remark component
+- page component
