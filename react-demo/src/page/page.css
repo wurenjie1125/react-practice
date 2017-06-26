@@ -1,11 +1,11 @@
-.page-container {
+.page-container-sm {
   margin: 20px auto;
   font-size: 12px; }
-  .page-container a {
+  .page-container-sm a {
     text-decoration: none; }
-  .page-container .totle-page {
+  .page-container-sm .totle-page {
     padding-right: 10px; }
-  .page-container .prev, .page-container .next, .page-container .page-num {
+  .page-container-sm .prev, .page-container-sm .next, .page-container-sm .page-num {
     display: inline-block;
     color: #222;
     cursor: pointer;
@@ -13,9 +13,69 @@
     margin: 0 4px;
     text-decoration: none;
     line-height: 26px; }
-    .page-container .prev:hover, .page-container .next:hover, .page-container .page-num:hover {
+    .page-container-sm .prev:hover, .page-container-sm .next:hover, .page-container-sm .page-num:hover {
       color: #00a1d6; }
-    .page-container .prev.current, .page-container .next.current, .page-container .page-num.current {
+    .page-container-sm .prev.current, .page-container-sm .next.current, .page-container-sm .page-num.current {
       color: #00a1d6; }
-  .page-container .page-box {
+  .page-container-sm .page-box {
     display: inline-block; }
+
+.page-container {
+  font-size: 12px;
+  margin: 20px 0; }
+  .page-container .page-jump {
+    float: right;
+    color: #99a2aa;
+    line-height: 36px;
+    height: 36px;
+    font-size: 12px; }
+    .page-container .page-jump input {
+      margin: 7px 5px 0;
+      padding: 0 10px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      box-shadow: none;
+      width: 24px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      outline: none;
+      text-align: center;
+      cursor: pointer; }
+      .page-container .page-jump input:focus {
+        border-color: #00a1d6; }
+  .page-container a {
+    text-decoration: none; }
+  .page-container .totle-page {
+    padding-right: 10px; }
+  .page-container .prev, .page-container .next, .page-container .page-num, .page-container .dian {
+    min-width: 15px;
+    font-size: 14px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    color: #222;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-image: none;
+    margin: 0 2px;
+    padding: 0 10px;
+    transition: all 0.2s; }
+    .page-container .prev:hover, .page-container .next:hover, .page-container .page-num:hover, .page-container .dian:hover {
+      background: #00a1d6;
+      color: #fff;
+      border: 1px solid #00a1d6; }
+    .page-container .prev.current, .page-container .next.current, .page-container .page-num.current, .page-container .dian.current {
+      background: #00a1d6;
+      color: #fff;
+      border: 1px solid #00a1d6; }
+  .page-container .dian {
+    border: 1px solid #fff;
+    cursor: default; }
+    .page-container .dian:hover {
+      background: #fff;
+      color: #222;
+      border: 1px solid #fff; }

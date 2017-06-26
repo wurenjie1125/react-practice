@@ -13,11 +13,16 @@ class Comment extends Component {
     constructor(props){
         super(props);
     }
+    pageOnChange(){
+
+    }
     render() {
         return (
             <section>
                 <CommentSend/>
                 <CommentList/>
+                <Page totalPage="50"  onChange={this.pageOnChange}/>
+
                 <CommentSend/>
 
             </section>
@@ -106,7 +111,7 @@ class CommentItem extends Component {
                     </div>
                     <ul className="reply-list">
                         { ReplyList }
-                        <Page totalPage="10" onChange={this.pageOnChange}/>
+                        <Page totalPage="10" size="sm" onChange={this.pageOnChange}/>
                         { replyInput }
                     </ul>
 
