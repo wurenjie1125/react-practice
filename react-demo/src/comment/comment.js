@@ -48,6 +48,7 @@ class CommentItem extends Component {
         super(props);
         this.triggleReply = this.triggleReply.bind(this);
         this.childrenReply = this.childrenReply.bind(this);
+        this.pageOnChange = this.pageOnChange.bind(this);
         this.state = {
             replyVisible : false,
             commentValue: ''
@@ -65,6 +66,9 @@ class CommentItem extends Component {
             this.setState({ replyVisible: true})
         }
 
+    }
+    pageOnChange(pageNum){
+        console.log(pageNum)
     }
     render(){
         let replyInput = null;
@@ -102,7 +106,7 @@ class CommentItem extends Component {
                     </div>
                     <ul className="reply-list">
                         { ReplyList }
-                        <Page totalPage="10" />
+                        <Page totalPage="10" onChange={this.pageOnChange}/>
                         { replyInput }
                     </ul>
 

@@ -8,21 +8,30 @@ import './page.css'
 class Page extends Component {
     constructor(props){
         super(props);
-        this.toNextPage = this.toNextPage.bind(this);
-        this.toPrevPage = this.toPrevPage.bind(this);
         this.state = {
-            currentPage:6
+            currentPage:1
         }
     }
-    toNextPage(){
-        this.setState({currentPage:++this.state.currentPage})
-    }
-    toPrevPage(){
-        this.setState({currentPage:--this.state.currentPage})
-    }
-    toPage(index){
-        this.setState({currentPage:index})
+    toPage(type){
+        if(type == 'prev'){
+            this.setState({currentPage:this.state.currentPage-1},function(){
+                    this.onChangeToParent.call(this)
+                }
+            )
+        }else if(type == 'next'){
+            this.setState({currentPage:this.state.currentPage+1},
+                this.onChangeToParent.call(this)
 
+            )
+        }else{
+            this.setState({currentPage:type},function(){
+                this.onChangeToParent.call(this)
+                }
+            )
+        }
+    }
+    onChangeToParent(){
+        this.props.onChange && this.props.onChange(this.state.currentPage)
     }
     render(){
         const totalPage = this.props.totalPage;
@@ -50,9 +59,9 @@ class Page extends Component {
         return (
             <section className="page-container">
                 <span className="totle-page">共{totalPage}页</span>
-                { currentPage == 1 ? '' : <a href="javascript:;" className="prev" onClick={this.toPrevPage}>上一页</a>}
+                { currentPage == 1 ? '' : <a href="javascript:;" className="prev" onClick={this.toPage.bind(this,'prev')}>上一页</a>}
                 { pagebox }
-                { currentPage == totalPage ? '' :<a href="javascript:;" className="next" onClick={this.toNextPage}>下一页</a>}
+                { currentPage == totalPage ? '' :<a href="javascript:;" className="next" onClick={this.toPage.bind(this,'next')}>下一页</a>}
             </section>
         )
     }
